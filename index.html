@@ -199,8 +199,13 @@
 <body>
   <div id="container">
     <div class='title' style="">
-      <h2><img src="https://blog.kakaocdn.net/dn/beqniV/btrC4iCBIwB/YwVMko19R00oHgon6upXs1/img.png" width="100%;" /></h2>
+      <h2><img src="https://blog.kakaocdn.net/dn/beqniV/btrC4iCBIwB/YwVMko19R00oHgon6upXs1/img.png" id="logo" style="display:none;width:100%;" /></h2>
     </div>
+    <script>
+      document.getElementById('logo').addEventListener('load', function() {
+        this.style.display = '';
+      });
+    </script>
     <div class='description' style="">
       내용의 일부가 ASCII 코드로 변환된 편지를 쓸 수 있습니다.<br />
       ASCII 코드로 변환된 내용은 쉽게 원래 내용으로 복호화가 가능합니다.<br />
@@ -227,8 +232,8 @@
     <br />
     <script>
       let maxWidth = Math.round(500 * 1.3);
-      if (maxWidth - 20 > window.innerWidth) {
-        maxWidth = window.innerWidth - 20;
+      if (maxWidth - 30 > window.innerWidth) {
+        maxWidth = window.innerWidth - 30;
       }
       new PartnersCoupang.G({
         "id": 584632,
