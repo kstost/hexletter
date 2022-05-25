@@ -30,8 +30,18 @@
       gtag("config", "G-8LYDTYG023");
     </script>
     <style>
-      @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@500&family=Nanum+Pen+Script&display=swap");
+      /* @font-face {
+        font-family: "Tium";
+        src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_220508@1.0/Tium.woff2") format("woff2");
+        font-weight: normal;
+        font-style: normal;
+      } */
+      /* @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@500&family=Nanum+Pen+Script&display=swap"); */
+      @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@500&family=Nanum+Pen+Script&family=Noto+Sans+KR&display=swap");
 
+      * {
+        font-family: "Noto Sans KR", sans-serif;
+      }
       body {
         background: #8a8876;
         color: #fff;
@@ -55,6 +65,36 @@
         margin-top: 10px;
         padding: 30px;
         font-size: 20px;
+        font-family: "Noto Sans KR", sans-serif;
+      }
+
+      .dialogbox {
+        box-sizing: border-box;
+        padding: 30px;
+        font-family: "Noto Sans KR", sans-serif;
+      }
+      .dialogbox * {
+        box-sizing: border-box;
+        font-family: "Noto Sans KR", sans-serif;
+        font-size: 20px;
+      }
+      .dialogbox .dialogtitle {
+        /* box-sizing: border-box; */
+        /* font-family: "Noto Sans KR", sans-serif; */
+        font-size: 30px;
+        padding-bottom: 20px;
+      }
+      .dialogbox button {
+        position: absolute;
+        bottom: 30px;
+        width: calc(100% - 60px);
+        border: 0px solid red;
+        background-color: rgb(104, 201, 0);
+        padding: 10px;
+        font-size: 20px;
+        box-sizing: border-box;
+        cursor: pointer;
+        /* font-family: "Noto Sans KR", sans-serif; */
       }
 
       #letter {
@@ -166,13 +206,13 @@
       }
 
       .description {
-        font-family: "IBM Plex Serif", serif;
-        font-size: 25px;
+        font-size: 20px;
         padding-bottom: 10px;
+        font-family: "Noto Sans KR", sans-serif;
       }
 
       .warn {
-        font-family: "IBM Plex Serif", serif;
+        font-family: "Noto Sans KR", sans-serif;
         font-size: 20px;
         color: #e7ff26;
         padding: 10px;
@@ -183,7 +223,7 @@
       }
 
       .bhow {
-        font-family: "IBM Plex Serif", serif;
+        font-family: "Noto Sans KR", sans-serif;
         font-size: 20px;
         color: #000;
         padding: 10px;
@@ -194,8 +234,8 @@
       }
 
       .bhowd {
-        font-family: "IBM Plex Serif", serif;
-        font-size: 18px;
+        font-family: "Noto Sans KR", sans-serif;
+        font-size: 20px;
         color: #000;
         padding: 10px;
         /* background: #000; */
@@ -232,6 +272,18 @@
         padding: 20px;
         border-radius: 10px;
       }
+      .coupangment {
+        font-family: "Noto Sans KR", sans-serif;
+        font-size: 15px;
+        color: #000;
+        padding-top: 10px;
+      }
+      .fontnotice {
+        font-family: "Noto Sans KR", sans-serif;
+        font-size: 15px;
+        color: #000;
+        /* padding: 10px; */
+      }
     </style>
   </head>
 
@@ -249,11 +301,11 @@
         <div class="bhowd">
           이미지가 클립보드에 복사 된 상태에서 본 사이트에 붙여넣기를 하면 복호화 가능합니다<br />
           복호화는 PC에서 붙여넣기 단축키로만 가능합니다<br />
-          붙여넣기 단축키 맥 Cmd+V, 윈도우즈: Ctrl+V
+          붙여넣기 단축키 = macOS(Cmd+V), Windows(Ctrl+V)
         </div>
         <textarea id="txthead" placeholder="머리말을 쓰세요"></textarea>
         <textarea id="txtbody" placeholder="인코딩 할 내용을 쓰세요 (쉽게 복호화 가능합니다)"></textarea>
-        <div id="blankletter" style="position: relative; display: none; background: #000"></div>
+        <div id="blankletter" style="position: relative; display: none; background: #fff"></div>
         <div id="letter" style="position: relative">
           <div id="subcont">
             <div id="headcont"></div>
@@ -282,7 +334,8 @@
           });
         </script>
         <br />
-        <div style="padding: 10px">"이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다."</div>
+        <div class="coupangment">이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.</div>
+        <div class="fontnotice">본 사이트에는 IBM Plex Serif, Nanum Pen Script, Noto Sans Korean 폰트가 사용되었습니다.</div>
         <div class="bhow">개발자 stk@kakao.com</div>
       </div>
 
